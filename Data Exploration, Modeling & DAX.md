@@ -1,9 +1,9 @@
-The process
+**The process**
 I began by cleaning the raw data, removing 200 duplicates, fixing channel name typos, and converting all date fields from text to proper date types. After cleaning, I performed SQL-based analysis where I created aggregated views such as CAC, ROAS, LTV, funnel drop-offs, and cohort LTV. 
 Once the SQL outputs were imported into Power BI, I created a dim_channel table because ‘channel’ existed separately in the raw marketing table, the sales table, and the SQL result tables. This allowed me to connect everything using a single channel reference and fix previously disconnected relationships.
 After the model was connected, I created DAX measures, including CAC, ROAS Gap, LTV/CAC Ratio, Lead-to-Customer Conversion, and Profit per Customer, to calculate KPIs that were not directly available from SQL.
 
-DAX Measures
+**DAX Measures**
 
 Lead_to_Customer_Conversion = DIVIDE(SUM(marketing[wins]), SUM(marketing[leads]))
 
